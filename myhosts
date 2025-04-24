@@ -1,11 +1,2 @@
----
-- hosts: all
-  become: yes
-  gather_facts: yes
-  tasks:
-  - name: i want install git
-    apt:
-      name: git
-      state: present
-      
+172.31.90.202
 
