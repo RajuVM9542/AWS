@@ -7,9 +7,11 @@
     apt:
       name: apache2
       state: present
+      update_cache: yes
 
   - name: i want install apache2
     apt:
       name: git
       state: present
+      update_cache: yes
       
