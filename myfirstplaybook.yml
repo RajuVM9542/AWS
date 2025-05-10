@@ -3,8 +3,8 @@
   become: yes
   gather_facts: yes
   tasks:
-  - name: i want install git
+  - name: i want install apache2
     apt:
-      name: git
+    - name: apache2
       state: present
       
