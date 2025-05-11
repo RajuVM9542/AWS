@@ -9,9 +9,9 @@
       state: present
       update_cache: yes
 
-  - name: i want install apache2
+  - name: i want stop the instance
     apt:
-      name: git
-      state: present
-      update_cache: yes
+     service: apache2
+     state: restart
+     update_cache: yes
       
