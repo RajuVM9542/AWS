@@ -3,3 +3,8 @@
 
 [DBserver]
 172.31.27.4
+
+
+[webserver:vars]
+apache=apache2
+jdk=java-1.8.0-openjdk
