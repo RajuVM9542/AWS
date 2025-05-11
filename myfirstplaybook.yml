@@ -14,7 +14,7 @@
   - name: i want stop the instance
     service:
       name: apache2
-      state: restarted
+      state: started
     when: ansible_os_family=="Debian"
      
       
