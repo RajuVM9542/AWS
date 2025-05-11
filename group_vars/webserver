@@ -1,0 +1,4 @@
+---
+
+apache: apache2
+jdk: java-1.8.0-openjdk
