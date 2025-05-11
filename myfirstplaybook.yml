@@ -5,16 +5,16 @@
   tasks:
   - name: i want install apache2
     apt:
-      name: apache2
-      state: absent
+      name: {{apache}}
+      state: present
       update_cache: yes
-    when: ansible_os_family=="ubuntu"
+    when: ansible_os_family=="Debian"
       
 
   - name: i want stop the instance
     service:
       name: apache2
       state: started
-    when: ansible_os_family=="Debian"
+    when: ansible_os_family=="ubuntu"
      
       
