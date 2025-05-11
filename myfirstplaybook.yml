@@ -15,7 +15,6 @@
     service:
       name: apache2
       state: restarted
-      update_cache: yes
     when: ansible_os_family=="Debian"
      
       
