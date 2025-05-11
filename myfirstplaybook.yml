@@ -6,12 +6,12 @@
   - name: i want install apache2
     apt:
       name: apache2
-      state: present
+      state: absent
       update_cache: yes
 
   - name: i want stop the instance
     apt:
-     service: apache2
-     state: restart
+     name: tree
+     state: present
      update_cache: yes
       
