@@ -6,5 +6,5 @@
 
 
 [webserver:vars]
-apache=apache2
-jdk=java-1.8.0-openjdk
+apache= apache2
+jdk= java-1.8.0-openjdk
