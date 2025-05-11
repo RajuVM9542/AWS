@@ -7,11 +7,13 @@
     apt:
       name: apache2
       state: absent
+      when: ansible_os_family=="ubuntu"
       update_cache: yes
 
   - name: i want stop the instance
-    apt:
-     name: tree
-     state: present
+    service:
+     name: apache2
+     state: restarted
+     when: ansible_os_family=="Debian"
      update_cache: yes
       
