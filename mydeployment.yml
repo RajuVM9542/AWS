@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myFirstDeployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myFirstDeployment
+  template:
+    metadata:
+      labels:
+        app: myFirstDeployment
+    spec:
+      containers:
+      - name: myFirstDeployment
+        image: ubuntu
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8091
