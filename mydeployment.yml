@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myFirstDeployment
+  name: myfirstDeployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: myFirstDeployment
+      app: myfirstDeployment
   template:
     metadata:
       labels:
-        app: myFirstDeployment
+        app: myfirstDeployment
     spec:
       containers:
-      - name: myFirstDeployment
+      - name: myfirstDeployment
         image: umaha4iac/myjavaapp20sep22:2
         resources:
           limits:
