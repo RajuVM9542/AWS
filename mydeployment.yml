@@ -1,25 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myjavaapp-deploy
-  labels:
-    app: myjavaapp
+  name: nginx-deployment
 spec:
-  replicas: 3
+  replicas: 1
   selector:
-      matchLabels:
-         app: myjavaapp
+    matchLabels:
+      app: nginx
   template:
-     metadata:
-       labels:
-         app: myjavaapp
-     spec:
-       containers:
-       - name: myjavaapp-container
-         image:  jenkins
-         ports:
-         - containerPort: 8080
-       tolerations: 
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+      tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         operator: "Exists"
-        effect: "NoSchedule"  
+        effect: "NoSchedule"
