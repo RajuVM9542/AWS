@@ -19,3 +19,7 @@ spec:
          image:  jenkins
          ports:
          - containerPort: 8080
+       tolerations: 
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"  
